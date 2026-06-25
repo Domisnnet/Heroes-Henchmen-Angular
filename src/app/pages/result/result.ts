@@ -2,10 +2,9 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-result',
+  standalone: true,
   imports: [],
   templateUrl: './result.html',
-  styleUrl: './result.scss',
+  styleUrls: ['./result.scss'],
 })
-export class Result {
-
-}
+export class Result {}

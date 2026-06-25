@@ -2,10 +2,9 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-quiz',
+  standalone: true,
   imports: [],
   templateUrl: './quiz.html',
-  styleUrl: './quiz.scss',
+  styleUrls: ['./quiz.scss'],
 })
-export class Quiz {
-
-}
+export class Quiz {}
