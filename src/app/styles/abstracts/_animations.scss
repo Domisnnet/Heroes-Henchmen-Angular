@@ -15,3 +15,9 @@
   100% { opacity: .4; }
   50% { opacity: 1; }
 }
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
