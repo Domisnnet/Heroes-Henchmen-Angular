@@ -63,10 +63,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "y:build:production"
+              "buildTarget": "heroes-henchmen:build:production"
             },
-            "development": {
-              "buildTarget": "y:build:development"
+            "development": { 
+              "buildTarget": "heroes-henchmen:build:development"
             }
           },
           "defaultConfiguration": "development"
