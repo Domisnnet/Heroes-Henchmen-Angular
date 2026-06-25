@@ -1,0 +1,49 @@
+.home {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.home__content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.home__subtitle {
+  color: var(--viral-primary);
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.home__title {
+  display: flex;
+  flex-direction: column;
+  line-height: .9;
+  color: var(--hero-primary);
+}
+
+.home__title span {
+  font-size: 2rem;
+  color: var(--white);
+}
+
+.home__button {
+  align-self: center;
+  padding: 1rem 2rem;
+  background: var(--viral-primary);
+  color: var(--black);
+  border: 4px solid var(--black);
+  box-shadow: var(--shadow-card);
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.home__button:hover {
+  transform: translate(-3px, -3px);
+}
