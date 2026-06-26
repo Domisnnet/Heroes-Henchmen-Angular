@@ -1,3 +1,27 @@
+@mixin absolute-fill {
+  position: absolute;
+  inset: 0;
+}
+
+@mixin background-cover {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@mixin brutal-button {
+  border: var(--border-width) solid var(--black);
+  box-shadow: var(--shadow-card);
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+@mixin brutal-card {
+  background: var(--bg-overlay);
+  border: var(--border-width) solid var(--white);
+  box-shadow: var(--shadow-card);
+}
+
 @mixin flex-center {
   display: flex;
   justify-content: center;
@@ -9,12 +33,6 @@
   flex-direction: column;
 }
 
-@mixin background-cover {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
 @mixin full-page {
   min-height: var(--viewport-height);
 }
@@ -23,22 +41,4 @@
   @include full-page;
   @include background-cover;
   background-image: var(--background-overlay), $image;
-}
-
-@mixin brutal-card {
-  background: var(--bg-overlay);
-  border: var(--border-width) solid var(--white);
-  box-shadow: var(--shadow-card);
-}
-
-@mixin brutal-button {
-  border: var(--border-width) solid var(--black);
-  box-shadow: var(--shadow-card);
-  cursor: pointer;
-  transition: var(--transition-fast);
-}
-
-@mixin absolute-fill {
-  position: absolute;
-  inset: 0;
 }
