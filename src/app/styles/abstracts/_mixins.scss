@@ -42,3 +42,10 @@
   @include background-cover;
   background-image: var(--background-overlay), $image;
 }
+
+@mixin page-layout {
+  @include flex-center;
+  overflow: hidden;
+  position: relative;
+  padding: var(--space-md);
+}

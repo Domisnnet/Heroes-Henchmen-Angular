@@ -1,80 +1,63 @@
+@use '../../styles/abstracts/mixins' as *;
+
 .home {
-  min-height: calc(100vh - 100px); 
-  display: flex;
-  position: relative;
-  align-items: center;
-  justify-content: center;
-  padding: var(--space-md);
-  background-image: 
-    linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), 
-    url('/assets/images/heroes.png');
-  background-position: center;
-  background-size: cover;
-  background-size: 100% 100%; 
-  background-repeat: no-repeat;
-  overflow: hidden;
+  @include page-background(var(--home-background));
+  @include page-layout;
+  min-height: calc(var(--viewport-height) - var(--header-height) - var(--footer-height));
 }
 
 .home__content {
-  display: flex;
-  flex-direction: column;
-  align-items: center; 
+  @include flex-column;
+  align-items: center;
   width: 100%;
-  max-width: 800px; 
+  max-width: 50rem;
 }
 
 .home__title {
-  display: flex;
-  flex-direction: column;
+  @include flex-column;
   align-items: center;
   justify-content: center;
   color: var(--hero-secondary);
-  margin: 0; 
-  gap: var(--space-md); 
+  gap: var(--space-md);
   line-height: .9;
+  margin: 0;
 }
 
-.home__title span {
+.home__highlight {
   color: var(--success);
-  font-size: var(--text-3xl); 
+  font-size: var(--text-3xl);
+  font-weight: 700;
   box-shadow: var(--shadow-hero);
-  font-weight: bolder;
 }
 
 .henchmen {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flex-center;
   color: var(--hench-primary);
-  font-size: var(--text-5xl);
   font-family: var(--font-heading);
-  margin: 0; 
+  font-size: var(--text-5xl);
+  margin: 0;
 }
 
 .home__subtitle {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flex-center;
   color: var(--viral-primary);
   font-size: var(--text-2xl);
   font-weight: 800;
 }
 
 .home__button {
+  @include brutal-button;
   align-self: center;
+  margin-top: var(--space-lg);
   padding: var(--space-md) var(--space-xl);
   background: var(--viral-primary);
   color: var(--black);
-  font-weight: bolder;
-  border: 4px solid var(--danger);
+  border-color: var(--danger);
   border-radius: var(--radius-md);
-  box-shadow: var(--shadow-card);
-  cursor: pointer;
   font-family: var(--font-heading);
   font-size: var(--text-2xl);
-  transition: .2s ease;
-  animation: pulse 2s infinite;
-  margin-top: var(--space-lg);
+  font-weight: 700;
+  animation: pulse var(--animation-pulse);
 }
 
 .home__button:hover {
