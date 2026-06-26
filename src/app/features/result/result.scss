@@ -7,20 +7,27 @@
 }
 
 .result__content {
-  @include flex-center;
-  flex: 1;
-  padding: var(--space-sm);
+  @include flex-column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 50rem;
+  margin: 0;
+  padding: 0;
+  margin-top: var(--space-result-top);
+  margin-bottom: var(--space-result-bottom);
 }
 
 .result__card {
   @include page-card;
 }
 
-.result__card button {
+.result__card-button {
   @include brutal-button;
   padding: var(--space-md);
   border-color: var(--success);
   border-radius: var(--radius-md);
+  background-color: var(--bg-card);
   color: var(--warning);
   font-weight: 700;
 }

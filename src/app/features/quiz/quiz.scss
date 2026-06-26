@@ -7,20 +7,24 @@
 }
 
 .quiz__content {
-  @include flex-center;
-  flex: 1;
-  padding: var(--space-sm);
+  @include flex-column;
+  align-items: center;
+  width: 100%;
+  max-width: 50rem;
+  margin-bottom: 0;
+  padding: 0;
 }
 
 .quiz__card {
   @include page-card;
 }
 
-.quiz__card button {
+.quiz__card-button {
   @include brutal-button;
   padding: var(--space-md);
   border-color: var(--success);
   border-radius: var(--radius-md);
+  background-color: var(--bg-card);
   color: var(--warning);
   font-weight: 700;
 }
