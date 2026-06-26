@@ -1,44 +1,54 @@
 .home {
-  height: 100vh;
+  min-height: calc(100vh - 100px); 
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-md);
   background-image: 
-    linear-gradient(rgba(0,0,0,.90), rgba(0, 0, 0, 0.95)), 
+    linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), 
     url('/assets/images/heroes.png');
   background-position: center;
   background-size: cover;
-  
+  background-size: 100% 100%; 
+  background-repeat: no-repeat;
+  overflow: hidden;
 }
 
 .home__content {
   display: flex;
   flex-direction: column;
-  gap: var(--space-xl);
-  margin-bottom: var(--space-sm);
+  align-items: center; 
+  gap: var(--space-md);
+  width: 100%;
+  max-width: 800px; 
 }
 
 .home__title {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
   color: var(--hero-secondary);
-  margin-top: var(--space-md);
-  gap: var(--space-2xl);
+  margin: 0; 
+  gap: var(--space-xl); 
   line-height: .9;
 }
 
 .home__title span {
-  color: var(--white);
-  font-size: var(--text-xl);
-  font-weight: 800;
+  color: var(--success);
+  font-size: var(--text-3xl); 
+  font-weight: bolder;
 }
 
 .henchmen {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--hench-secondary);
+  color: var(--hench-primary);
   font-size: var(--text-5xl);
   font-family: var(--font-heading);
+  margin: 0; 
 }
 
 .home__subtitle {
@@ -46,8 +56,9 @@
   align-items: center;
   justify-content: center;
   color: var(--viral-primary);
-  font-size: var(--text-xl);
-  font-weight: 700;
+  font-size: var(--text-2xl);
+  font-weight: 800;
+  margin-top: var(--space-md); 
 }
 
 .home__button {
@@ -63,6 +74,7 @@
   font-size: var(--text-2xl);
   transition: .2s ease;
   animation: pulse 2s infinite;
+  margin-top: var(--space-sm);
 }
 
 .home__button:hover {
