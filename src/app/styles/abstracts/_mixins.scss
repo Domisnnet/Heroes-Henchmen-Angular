@@ -37,10 +37,11 @@
   min-height: var(--viewport-height);
 }
 
-@mixin page-background($image) {
-  @include full-page;
-  @include background-cover;
-  background-image: var(--background-overlay), $image;
+@mixin page-background($background-image) {
+  background-image: var(--background-overlay), $background-image;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 @mixin page-card {

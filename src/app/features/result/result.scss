@@ -1,7 +1,7 @@
 @use '../../styles/abstracts' as *;
 
 .result {
-  @include page-background(var(--quiz-background));
+  @include page-background(var(--result-background));
   @include page-layout;
   min-height: calc(var(--viewport-height) - var(--header-height) - var(--footer-height));
 }
