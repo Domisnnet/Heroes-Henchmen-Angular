@@ -4,6 +4,8 @@
   @include page-background(var(--home-background));
   @include page-layout;
   min-height: calc(var(--viewport-height) - var(--header-height) - var(--footer-height));
+  background-position: center;
+  background-size: cover;
 }
 
 .home__content {
