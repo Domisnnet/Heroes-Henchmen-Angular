@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
-import { Result } from '@quiz/models/result.model';
+import { ResultQuiz } from '@quiz/models/result.model';
 import { ResultType } from '@quiz/enums/result-type.enum';
 import { RESULTS } from '@quiz/data/results';
 
-@Injectable({
+  @Injectable({
   providedIn: 'root'
 })
 export class ResultRepository {
-  getAll(): Result[] { return RESULTS; }
-  getByType(type: ResultType): Result | undefined { return RESULTS.find(result => result.type === type); }
+  getAll(): ResultQuiz[] { return RESULTS; }
+  getByType(type: ResultType): ResultQuiz | undefined { return RESULTS.find(result => result.type === type); }
 }

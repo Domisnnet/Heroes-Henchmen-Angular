@@ -1,6 +1,6 @@
 import { ResultType } from '@quiz/enums/result-type.enum';
 
-export interface Result {
+export interface ResultQuiz {
   type: ResultType;
   title: string;
   description: string;

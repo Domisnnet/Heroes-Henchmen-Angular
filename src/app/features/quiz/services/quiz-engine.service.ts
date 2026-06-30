@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { Answer } from '@quiz/models/answer.model';
 import { Question } from '@quiz/models/question.model';
-import { Result } from '@quiz/models/result.model';
+import { ResultQuiz } from '@quiz/models/result.model';
 import { QUIZ_CONSTANTS } from '@quiz/constants/quiz.constants';
 import { QuestionRepository } from '@quiz/repository/question.repository';
 import { ResultRepository } from '@quiz/repository/result.repository';
@@ -41,7 +41,7 @@ export class QuizEngineService {
     this.loadCurrentQuestion();
   }
 
-  getResult(): Result {
+  getResult(): ResultQuiz {
     const type = QuizScoreRule.resolve(this.score);
     return this.resultRepository.getByType(type)!;
   }
