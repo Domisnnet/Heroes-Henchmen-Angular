@@ -1,4 +1,4 @@
-@use '../../  styles/abstracts' as *;
+@use '../../styles/abstracts' as *;
 
 .quiz {
   @include page-background(var(--quiz-background));
@@ -7,22 +7,31 @@
 }
 
 .quiz__content {
-  @include flex-column;
-  align-items: center;
-  width: 100%;
-  max-width: 50rem;
+  @include flex-center;
+  flex: 1;
+  padding: var(--space-sm);
 }
 
 .quiz__card {
   @include page-card;
 }
 
+.quiz__question {
+  text-align: center;
+  color: var(--white);
+  font-size: var(--text-xl);
+}
+
 .quiz__card-button {
   @include brutal-button;
+  width: 100%;
   padding: var(--space-md);
+  background: var(--bg-card);
+  color: var(--white);
   border-color: var(--success);
   border-radius: var(--radius-md);
-  background-color: var(--bg-card);
-  color: var(--warning);
+  font-size: var(--text-md);
   font-weight: 700;
+
+  &:hover { background: var(--success); color: var(--black); }
 }

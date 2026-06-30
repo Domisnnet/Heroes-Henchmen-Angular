@@ -1,7 +1,7 @@
-import { Answer } from './answer.model';
-
 export interface Question {
   id: number;
-  text: string;
+  question: string;
   answers: Answer[];
+  image?: string;
+  category?: 'hero' | 'henchman';
 }

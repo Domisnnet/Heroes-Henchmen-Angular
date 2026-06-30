@@ -2,11 +2,10 @@
 <section class="quiz">
   <main class="quiz__content">
     <div class="quiz__card">
-      <h3>Você encontra uma carteira na rua... você:</h3>
-      <button class="quiz__card-button">Procura o dono</button>
-      <button class="quiz__card-button">Entrega para a polícia</button>
-      <button class="quiz__card-button">Fica com o dinheiro</button>
-      <button class="quiz__card-button">Entrega apenas se tiver recompensa</button>
+      <h3 class="quiz__question">{{ currentQuestion.question }}</h3>
+      @for (answer of currentQuestion.answers; track answer.id) {
+        <button class="quiz__card-button" (click)="answer(answer)">{{ answer.text }}</button>
+      }
     </div>
   </main>
 </section>

@@ -1,6 +1,7 @@
 export interface Answer {
   id: number;
   text: string;
-  heroPoints: number;
-  henchPoints: number;
+  question: number;
+  score: number;
+  message: string;
 }

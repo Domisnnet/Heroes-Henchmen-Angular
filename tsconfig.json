@@ -8,14 +8,7 @@
       "@features/*": ["src/app/features/*"],
       "@shared/*": ["src/app/shared/*"],
       "@styles/*": ["src/app/styles/*"],  
-      "@quiz/*": ["src/app/features/quiz/*"],
-      "@quiz-data/*": ["src/app/features/quiz/data/*"],
-      "@quiz-models/*": ["src/app/features/quiz/models/*"],
-      "@quiz-interfaces/*": ["src/app/features/quiz/interfaces/*"],
-      "@quiz-enums/*": ["src/app/features/quiz/enums/*"],
-      "@quiz-services/*": ["src/app/features/quiz/services/*"],
-      "@quiz-repositories/*": ["src/app/features/quiz/repositories/*"],
-      "@quiz-constants/*": ["src/app/features/quiz/constants/*"]
+      "@quiz/*": ["src/app/features/quiz/*"]
     },
     "strict": true,
     "noImplicitOverride": true,
