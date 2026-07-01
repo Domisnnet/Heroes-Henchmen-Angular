@@ -6,24 +6,28 @@ export const QUESTIONS: Question[] = [
     question: 'Você encontra uma carteira na rua...',
     answers: [
       {
-        questionId: 1,
+        id: 1,
         text: 'Procura o dono',
-        score: 3
+        score: 3,
+        message: 'Você prefere fazer a coisa certa.'
       },
       {
         id: 2,
         text: 'Entrega para a polícia',
-        score: 2
+        score: 2,
+        message: 'Você acredita na justiça.'
       },
       {
         id: 3,
         text: 'Fica com o dinheiro',
-        score: -3
+        score: -3,
+        message: 'Tentador demais para resistir.'
       },
       {
         id: 4,
         text: 'Só entrega se tiver recompensa',
-        score: -1
+        score: -1,
+        message: 'Nada é totalmente de graça.'
       }
     ]
   },
@@ -35,22 +39,26 @@ export const QUESTIONS: Question[] = [
       {
         id: 1,
         text: 'Defende imediatamente',
-        score: 3
+        score: 3,
+        message: 'Você enfrenta o problema sem pensar duas vezes.'
       },
       {
         id: 2,
         text: 'Tenta conversar',
-        score: 2
+        score: 2,
+        message: 'Você prefere resolver conflitos com diálogo.'
       },
       {
         id: 3,
         text: 'Filma para postar depois',
-        score: -2
+        score: -2,
+        message: 'O entretenimento veio antes da ajuda.'
       },
       {
         id: 4,
         text: 'Sai andando',
-        score: -3
+        score: -3,
+        message: 'Você prefere não se envolver.'
       }
     ]
   }

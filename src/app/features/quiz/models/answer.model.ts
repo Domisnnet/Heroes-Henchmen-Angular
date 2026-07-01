@@ -1,7 +1,7 @@
 export interface Answer {
   id: number;
   text: string;
-  questionId: number;
+  questionId?: number;
   score: number;
   message: string;
 }

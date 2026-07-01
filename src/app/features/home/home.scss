@@ -61,8 +61,6 @@
   font-size: var(--text-2xl);
   font-weight: 700;
   animation: pulse var(--animation-pulse);
-}
 
-.home__button:hover {
-  transform: translate(-3px, -3px);
+  &:hover { transform: translate(-3px, -3px); }
 }

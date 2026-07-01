@@ -2,10 +2,14 @@
 <section class="result">
   <main class="result__content">
     <div class="result__card">
-      <h3>🦹 AGENTE DO CAOS</h3>
-      <p>Você nasceu para causar problemas e sair andando como se nada tivesse acontecido.</p>
-      <button class="result__card-button">Compartilhe seu Resultado</button>
+      <img class="result__image" [src]="result.image" [alt]="result.title" />
+      <h2 class="result__title">{{ result.title }}</h2>
+      <p class="result__description">{{ result.description }}</p>
+      <p class="result__message">{{ result.message }}</p>
+      <div class="result__actions">
+        <button type="button" class="result__card-button" (click)="restart()">🔄 Jogar novamente</button>
+      </div>
     </div>
   </main>
 </section>
-<app-footer [message]="'😂 Compartilhe e descubra quem é pior que você'" />
+<app-footer [message]="'😂 Compartilhe seu resultado e desafie seus amigos'" />

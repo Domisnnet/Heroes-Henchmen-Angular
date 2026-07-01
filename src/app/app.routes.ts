@@ -22,7 +22,7 @@ export const routes: Routes = [
     path: 'result',
     loadComponent: () =>
       import('./features/result/result')
-      .then(c => c.Result)
+      .then(c => c.ResultComponent)
   },
   {
     path: '**',
