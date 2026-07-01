@@ -3,29 +3,29 @@ import { Routes } from '@angular/router';
 export const routes: Routes = [
     {
         path: '',
-        redirectTo: 'home',
+        redirectTo: 'home-component',
         pathMatch: 'full'
     },
     {
-        path: 'home',
+        path: 'home-component',
         loadComponent: () =>
             import('./features/home-component/home.component')
-                .then(c => c.HomeComponent)
+                .then((c) => c.HomeComponent)
     },
     {
         path: 'quiz-component',
         loadComponent: () =>
             import('./features/quiz-component/quiz.component')
-                .then(c => c.QuizComponent)
+                .then((c) => c.QuizComponent)
     },
     {
-        path: 'result',
+        path: 'result-component',
         loadComponent: () =>
             import('./features/result-component/result.component')
-                .then(c => c.ResultComponent)
+                .then((c) => c.ResultComponent)
     },
     {
         path: '**',
-        redirectTo: 'home'
+        redirectTo: 'home-component'
     }
 ];
