@@ -12,57 +12,56 @@ import { QuizScoreRule } from '@features/quiz-component/rules/quiz-score.rule';
     providedIn: 'root'
 })
 export class QuizEngineService {
-    private currentIndex = QUIZ_CONSTANTS.INITIAL_QUESTION;
-    private readonly currentQuestionSubject: BehaviorSubject<Question>;
-    private readonly scoreSubject = new BehaviorSubject<number>(QUIZ_CONSTANTS.INITIAL_SCORE);
-    private readonly finishedSubject = new BehaviorSubject<boolean>(false);
-    readonly currentQuestion$;
-    readonly score$ = this.scoreSubject.asObservable();
-    readonly finished$ = this.finishedSubject.asObservable();
-
+  private currentIndex = QUIZ_CONSTANTS.INITIAL_QUESTION;
+  private readonly currentQuestionSubject: BehaviorSubject<Question>;
+  private readonly scoreSubject = new BehaviorSubject<number>(QUIZ_CONSTANTS.INITIAL_SCORE.hero);
+  private readonly finishedSubject = new BehaviorSubject<boolean>(false);
+  readonly currentQuestion$;
+  readonly score$ = this.scoreSubject.asObservable();
+  readonly finished$ = this.finishedSubject.asObservable();
     constructor(
-        private readonly questionRepository: QuestionRepository,
-        private readonly resultRepository: ResultRepository
+      private readonly questionRepository: QuestionRepository,
+      private readonly resultRepository: ResultRepository
     ) {
-        this.currentQuestionSubject = new BehaviorSubject<Question>(this.questionRepository.getFirst());
-        this.currentQuestion$ = this.currentQuestionSubject.asObservable();
+      this.currentQuestionSubject = new BehaviorSubject<Question>(this.questionRepository.getFirst());
+      this.currentQuestion$ = this.currentQuestionSubject.asObservable();
     }
 
     answer(answer: Answer): void {
-        if (this.finished) { return; }
-        this.addScore(answer);
-        this.nextQuestion();
+      if (this.finished) { return; }
+      this.addScore(answer);
+      this.nextQuestion();
     }
 
     reset(): void {
-        this.currentIndex = QUIZ_CONSTANTS.INITIAL_QUESTION;
-        this.scoreSubject.next(QUIZ_CONSTANTS.INITIAL_SCORE);
-        this.finishedSubject.next(false);
-        this.loadCurrentQuestion();
+      this.currentIndex = QUIZ_CONSTANTS.INITIAL_QUESTION;
+      this.scoreSubject.next(QUIZ_CONSTANTS.INITIAL_SCORE.hero);
+      this.finishedSubject.next(false);
+      this.loadCurrentQuestion();
     }
 
     getResult(): ResultQuiz {
-        const type = QuizScoreRule.resolve(this.score);
-        return this.resultRepository.getByType(type)!;
+      const type = QuizScoreRule.resolve(this.score);
+      return this.resultRepository.getByType(type)!;
     }
 
     get currentQuestion(): Question { return this.currentQuestionSubject.value; }
     get score(): number { return this.scoreSubject.value; }
     get finished(): boolean { return this.finishedSubject.value; }
 
-    private addScore(answer: Answer): void { this.scoreSubject.next(this.score + answer.score); }
+    private addScore(answer: Answer): void { this.scoreSubject.next(this.score + answer.heroPoints); }
     private nextQuestion(): void {
-        this.currentIndex++;
-        if (this.currentIndex >= this.questionRepository.getTotal()) {
-            this.finishedSubject.next(true);
-            return;
-        }
-        this.loadCurrentQuestion();
+      this.currentIndex++;
+      if (this.currentIndex >= this.questionRepository.getTotal()) {
+        this.finishedSubject.next(true);
+        return;
+      }
+      this.loadCurrentQuestion();
     }
 
     private loadCurrentQuestion(): void {
-        const question = this.questionRepository.getByIndex(this.currentIndex);
-        if (!question) { return; }
-        this.currentQuestionSubject.next(question);
+      const question = this.questionRepository.getByIndex(this.currentIndex);
+      if (!question) { return; }
+      this.currentQuestionSubject.next(question);
     }
 }
