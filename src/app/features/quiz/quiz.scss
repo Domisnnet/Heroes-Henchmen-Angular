@@ -9,8 +9,8 @@
 .quiz__content {
   @include flex-center;
   flex: 1;
-  margin-top: -60px;
-  margin-bottom: -60px;
+  margin-top: var(--space-default);
+  margin-bottom: var(--space-default);
 }
 
 .quiz__card {
