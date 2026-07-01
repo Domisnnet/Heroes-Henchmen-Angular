@@ -1,5 +1,5 @@
 export enum ResultType {
-  HERO = 'HERO',
-  HENCHMAN = 'HENCHMAN',
-  ANTI_HERO = 'ANTI_HERO'
+  HERO = 'hero',
+  ANTI_HERO = 'anti-hero',
+  HENCHMAN = 'henchman'
 }

@@ -1,7 +1,5 @@
-<app-header-component class="header">
+<app-header class="header">
   <div class="header__track">
-    @for(item of [1,2,3,4,5,6]; track item){
-      <span class="header__item">{{ message() }}</span>
-    }
+    @for(item of [1,2,3,4,5,6]; track item){ <span class="header__item">{{ message() }}</span> }
   </div>
-</app-header-component>
+</app-header>
