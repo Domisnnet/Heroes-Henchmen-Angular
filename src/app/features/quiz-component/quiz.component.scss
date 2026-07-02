@@ -9,15 +9,11 @@
 .quiz__content {
   @include flex-center;
   flex: 1;
-  padding: var(--space-md);
-  margin-top: var(--space-default);
-  margin-bottom: var(--space-default);
-  width: 100%;
+  padding: var(--space-xs);
 }
 
 .quiz__card {
   @include page-card;
-  padding: var(--space-md);
 }
 
 .quiz__chapter-container {
@@ -27,24 +23,19 @@
   width: 100%;
   gap: var(--space-sm);
   border-bottom: 2px solid var(--chapter);
-  padding-bottom: var(--space-xs);
-  margin-bottom: var(--space-xs);
+  padding-bottom: var(--space-md);
 }
 
 .quiz__chapter-title {
   font-family: var(--font-heading);
-  font-size: var(--text-lg);
   color: var(--success);
   letter-spacing: 1px;
-  text-transform: uppercase;
 }
 
 .quiz__category-title {
   font-family: var(--font-body);
-  font-size: var(--text-sm);
   color: var(--gray-300);
-  font-weight: 700;
-  text-transform: uppercase;
+  font-weight: 100;
 }
 
 .quiz__question {
@@ -52,7 +43,6 @@
   color: var(--white);
   font-size: var(--text-xl);
   font-family: var(--font-body);
-  text-transform: none;
 }
 
 .quiz__card-button {
