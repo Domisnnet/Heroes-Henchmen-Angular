@@ -2,7 +2,7 @@
 ![GitHub stars](https://img.shields.io/github/stars/Domisnnet/Heroes-Henchmens-Angular?style=for-the-badge)
 ![GitHub last commit](https://img.shields.io/github/last-commit/Domisnnet/Heroes-Henchmens-Angular?style=for-the-badge)
 
-<h2 id="sobre-o-projeto">1. ⚡ Heroes or Henchmen - Web App Quiz 🦹‍♂️🦸‍♂️</h2>
+<h2 id="sobre-o-projeto">1. ⚡ Heroes Or Henchmens - Web App Quiz 🦹‍♂️🦸‍♂️</h2>
 
 ![Status do Deploy](https://img.shields.io/badge/Status-Online-brightgreen?style=flat-square)
 ![Angular](https://img.shields.io/badge/Angular-20-DD0031?style=flat-square&logo=angular&logoColor=white)
@@ -148,7 +148,7 @@ Explore a arquitetura Angular completa no repositório oficial:
 | :--- | :--- | :--- |
 | **Full-Stack Dev** | **DomisDev** | Design, Arquitetura Angular e Configuração DevOps. |
 | **Infraestrutura** | **Google Firebase** | Provedor de Hosting e serviços cloud. |
-| **Apoio Técnico** | **Google Gemini** | Padronização King-Domfy e refinamento documental. |
+| **Apoio Técnico** | **Google Gemini** | Padronização e refinamento documental. |
 
 ---
 
