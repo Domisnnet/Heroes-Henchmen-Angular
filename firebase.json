@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist/heroes-henchmen/browser",
+    "public": "dist/heroes-henchmen",
     "ignore": [
       "firebase.json",
       "**/.*",
