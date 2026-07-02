@@ -9,13 +9,38 @@
 .quiz__content {
   @include flex-center;
   flex: 1;
-  margin-top: var(--space-default);
-  margin-bottom: var(--space-default);
 }
 
 .quiz__card {
   @include page-card;
   padding: auto;
+}
+
+.quiz__chapter-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: var(--space-sm);
+  border-bottom: 2px solid var(--chapter);
+  padding-bottom: var(--space-xs);
+  margin-bottom: var(--space-xs);
+}
+
+.quiz__chapter-title {
+  font-family: var(--font-heading);
+  font-size: var(--text-lg);
+  color: var(--success);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.quiz__category-title {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: var(--gray-300);
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 .quiz__question {

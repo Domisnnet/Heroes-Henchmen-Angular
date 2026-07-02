@@ -3,6 +3,12 @@
   <main class="quiz__content">
     @if (currentQuestion(); as question) {
       <div class="quiz__card">
+        @if (chapterInfo(); as info) {
+          <div class="quiz__chapter-container">
+            <span class="quiz__chapter-title">{{ info.title }} - {{ info.subtitle }}</span>
+            <span class="quiz__category-title">{{ info.categoryTitle }}</span>
+          </div>
+        }
         <h2 class="quiz__question">{{ question.question }}</h2>
         <div class="quiz__answers">
           @for (answer of question.answers; track answer.id) {
