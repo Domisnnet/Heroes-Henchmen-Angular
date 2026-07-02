@@ -9,11 +9,15 @@
 .quiz__content {
   @include flex-center;
   flex: 1;
+  padding: var(--space-md);
+  margin-top: var(--space-default);
+  margin-bottom: var(--space-default);
+  width: 100%;
 }
 
 .quiz__card {
   @include page-card;
-  padding: auto;
+  padding: var(--space-md);
 }
 
 .quiz__chapter-container {
